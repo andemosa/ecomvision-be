@@ -5,6 +5,13 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 
+import { User } from "./models/User";
+import { Product } from "./models/Product";
+import { ProductStat } from "./models/ProductStat";
+import { dataProduct, dataProductStat, dataUser } from "./data/index";
+
+import generalRouter from "./routes/general";
+
 import logger from "./utils/logger";
 
 import { errorHandler } from "./middleware/errorhandler";
@@ -19,6 +26,8 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
+
+app.use("/general", generalRouter)
 
 app.use(errorHandler);
 
