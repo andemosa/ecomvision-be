@@ -20,6 +20,7 @@ interface IProductStat {
   year?: number;
   monthlyData: Types.Array<IMonthly>;
   dailyData: Types.Array<IDaily>;
+  _doc: Omit<this, "_doc">;
 }
 
 // 2. Create a Schema corresponding to the document interface.

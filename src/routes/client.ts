@@ -1,9 +1,15 @@
-import express from 'express'
+import express from "express";
 
-import { getProducts } from '../controllers/client'
+import {
+  getCustomers,
+  getProducts,
+  getTransactions,
+} from "../controllers/client";
 
-const clientRouter = express.Router()
+const clientRouter = express.Router();
 
-clientRouter.get("/products", getProducts)
+clientRouter.get("/products", getProducts);
+clientRouter.get("/customers", getCustomers);
+clientRouter.get("/transactions", getTransactions);
 
-export default clientRouter
+export default clientRouter;

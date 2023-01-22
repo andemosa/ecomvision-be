@@ -8,9 +8,11 @@ import helmet from "helmet";
 import { User } from "./models/User";
 import { Product } from "./models/Product";
 import { ProductStat } from "./models/ProductStat";
-import { dataProduct, dataProductStat, dataUser } from "./data/index";
+import { Transaction } from "./models/Transaction";
+import { dataProduct, dataProductStat, dataTransaction, dataUser } from "./data/index";
 
 import generalRouter from "./routes/general";
+import clientRouter from "./routes/client";
 
 import logger from "./utils/logger";
 
@@ -28,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 app.use("/general", generalRouter)
+app.use("/client", clientRouter)
 
 app.use(errorHandler);
 
