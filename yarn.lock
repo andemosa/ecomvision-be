@@ -1193,10 +1193,10 @@ cors@^2.8.5:
     object-assign "^4"
     vary "^1"
 
-country-iso-2-to-3@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/country-iso-2-to-3/-/country-iso-2-to-3-1.1.0.tgz#219379033763abf86e96845317ae9be145aae850"
-  integrity sha512-+xaB6XPuuLuSQEjejWXjff7s5AMyisPk3jBmIqM7aymup79mEcinNkUiIpe4VedSPWCT+/bMW/EDJvRaiDaWKw==
+country-to-iso@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/country-to-iso/-/country-to-iso-1.3.0.tgz#e13c1cc55d0e18dbf4a1f21973be5cad904977b3"
+  integrity sha512-5zSkxil0DFPcLc4QDVjmre1X/rWMjI9ellsFaNTCBiGW09viU1A7M+YXUlIpJVu4rNT0HQP0L/4nwPKvPpM3aw==
 
 create-require@^1.1.0:
   version "1.1.1"

@@ -9,10 +9,18 @@ import { User } from "./models/User";
 import { Product } from "./models/Product";
 import { ProductStat } from "./models/ProductStat";
 import { Transaction } from "./models/Transaction";
-import { dataProduct, dataProductStat, dataTransaction, dataUser } from "./data/index";
+import { OverallStat } from "./models/OverallStat";
+import {
+  dataOverallStat,
+  dataProduct,
+  dataProductStat,
+  dataTransaction,
+  dataUser,
+} from "./data/index";
 
 import generalRouter from "./routes/general";
 import clientRouter from "./routes/client";
+import salesRouter from "./routes/sales";
 
 import logger from "./utils/logger";
 
@@ -29,8 +37,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-app.use("/general", generalRouter)
-app.use("/client", clientRouter)
+app.use("/general", generalRouter);
+app.use("/client", clientRouter);
+app.use("/sales", salesRouter);
 
 app.use(errorHandler);
 
