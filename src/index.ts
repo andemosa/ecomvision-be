@@ -10,7 +10,9 @@ import { Product } from "./models/Product";
 import { ProductStat } from "./models/ProductStat";
 import { Transaction } from "./models/Transaction";
 import { OverallStat } from "./models/OverallStat";
+import { AffiliateStat } from "./models/AffiliateStat";
 import {
+  dataAffiliateStat,
   dataOverallStat,
   dataProduct,
   dataProductStat,
@@ -21,6 +23,7 @@ import {
 import generalRouter from "./routes/general";
 import clientRouter from "./routes/client";
 import salesRouter from "./routes/sales";
+import adminRouter from "./routes/management";
 
 import logger from "./utils/logger";
 
@@ -40,6 +43,7 @@ app.use(cors());
 app.use("/general", generalRouter);
 app.use("/client", clientRouter);
 app.use("/sales", salesRouter);
+app.use("/management", adminRouter);
 
 app.use(errorHandler);
 

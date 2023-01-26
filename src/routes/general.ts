@@ -1,9 +1,10 @@
-import express from 'express'
+import express from "express";
 
-import { getUser } from '../controllers/general'
+import { getDashboardStats, getUser } from "../controllers/general";
 
-const generalRouter = express.Router()
+const generalRouter = express.Router();
 
-generalRouter.get("/user/:id", getUser)
+generalRouter.get("/user/:id", getUser);
+generalRouter.get("/dashboard", getDashboardStats);
 
-export default generalRouter
+export default generalRouter;
